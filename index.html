@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <title>Grosir Sembako App</title>
+</head>
+
+<body>
+  <nav class="navbar bg-gray"></nav>
+    <div class="container">
+        <h1 class="app-title">Grosir Sembako Ilham</h1>
+        <div id="product-list">
+            <h5 class="section-title">List Produk Sembako</h5>
+            <ul class="product-list">
+                <li>
+                  <img src="asset/Beras.jpeg" class="card-img-top" alt="..." />
+                    <h7>Beras</h7>
+                    <p>Harga: Rp 10,000/Kg</p>
+                </li>
+                <li>
+                  <img src="asset/Gula.jpg" class="card-img-top" alt="..." />
+                    <h7>Gula</h7>
+                    <p>Harga: Rp 8,000/kg</p>
+                </li>
+                <li>
+                  <img src="asset/Telur.jpg" class="card-img-top" alt="..." />
+                  <h7>Telur</h7>
+                  <p>Harga: Rp 24,000/Kg</p>
+              </li>
+                <li>
+                  <img src="asset/Minyak.jpg" class="card-img-top" alt="..." />
+                    <h7>Minyak Goreng</h7>
+                    <p>Harga: Rp 15,000/Liter</p>
+                </li>
+            </ul>
+        </div>
+        <button class="btn btn-primary" onclick="showAddProductModal()">Beli Produk</button>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div class="modal" id="addProductModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Tambah Produk</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form id="addProductForm">
+                        <div id="product-list">
+                            <h5 class="section-title">List Produk Sembako</h5>
+                            <ul class="product-list">
+                                <li>
+                                    <h7>1. Beras</h7>
+                                    <p>Harga: Rp 10,000/Kg</p>
+                                </li>
+                                <li>
+                                    <h7>2. Gula</h7>
+                                    <p>Harga: Rp 8,000/kg</p>
+                                </li>
+                                <li>
+                                  <h7>3. Telur</h7>
+                                  <p>Harga: Rp 24,000/Kg</p>
+                              </li>
+                                <li>
+                                    <h7>4. Minyak Goreng</h7>
+                                    <p>Harga: Rp 15,000/Liter</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <h5 class="section-title">Silahkan Masukan data produk yang tertera pada list diatas</h5>
+                        <div class="form-group">
+                            <label for="productName">Nama Produk:</label>
+                            <input type="text" class="form-control" id="productName" required>
+                        </div>        
+                        <div class="form-group">
+                            <label for="productPrice">Harga:</label>
+                            <input type="number" class="form-control" id="productPrice" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productQuantity">Jumlah:</label>
+                            <input type="number" class="form-control" id="productQuantity" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="addProduct()">Tambah</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+/* Add your splash screen styles here */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3498db;
+  color: #fff;
+}
